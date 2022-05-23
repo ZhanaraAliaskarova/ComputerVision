@@ -1,0 +1,21 @@
+import cv2
+import glob
+
+path = "C:/github/Labs/Lab3/images"
+images = glob.glob(path + "/*.jpg")
+for image in images:
+    #load image 
+    img = cv2.imread(image)
+    
+    #Split image filename by dot (ex. 1.jpg - ["1", "jpg"])
+    imagename = image.split(".")[0] 
+
+    #show image
+    cv2.waitKey()
+
+    #convert to Grayscale
+    gray_img = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+
+    #save to a new image file
+    cv2.imwrite(imagename + '-new.jpg', gray_img)
+    cv2.waitKey(0)
