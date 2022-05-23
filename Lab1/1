@@ -1,0 +1,11 @@
+import cv2
+
+img = cv2.imread('labka.jpg')
+cv2.imshow('labka',img)
+
+gray_img = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+
+cv2.imwrite('new.jpg', gray_img)
+cv2.imshow("GrayScale", gray_img)
+
+cv2.destroyAllWindows()
