@@ -1,7 +1,7 @@
 import cv2
 import glob
 
-path = "C:/github/Labs/Lab3/images"
+path = "C:/github/Labs/Lab2/"
 images = glob.glob(path + "/*.jpg")
 for image in images:
     #load image 
